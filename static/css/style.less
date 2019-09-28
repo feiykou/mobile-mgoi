@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    font-family: "Montserrat", "游ゴシック", "Yu Gothic", YuGothic, sans-serif !important;
+    .font-dpr(14px);
+    line-height: 1.6;
+}
+
+ul,li{
+    list-style: none;
+}
+  
+.content{
+    width: 1200px;
+    margin: 0 auto;   
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+  transition: none .2s cubic-bezier(.215,.61,.355,1);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+a:hover{
+  opacity: 0.6;
+  -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+  transition: none .2s cubic-bezier(.215,.61,.355,1);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+button{
+  border: 0;
+  outline: none;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/*
+* 字体库
+* */
+@font-face {
+	font-family: 'iconfont';  /* project id 1144491 */
+	src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot');
+	src: url('//at.alicdn.com/t/font_1144491_4pltizolm7y.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff2') format('woff2'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.woff') format('woff'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_1144491_4pltizolm7y.svg#iconfont') format('svg');
+}
+
+.iconfont{
+	font-family: iconfont;
+}
+
+// 按钮动画
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid #707070;
+  .font-dpr(12px);
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: 1;
+  }
+  
+}
+.btn-animate{
+    cursor: pointer;
+    -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+    transition: none .2s cubic-bezier(.215,.61,.355,1);
+    -webkit-transition-property: opacity,border-color,background-color,color;
+    transition-property: opacity,border-color,background-color,color;
+}
+
+.btn-gray{
+    &:hover{
+        border-color: #cbcbcb!important;
+        background-color: #cbcbcb!important;
+    }
+}
+
+.btn-primary{
+    &:hover{
+        border-color: #30c9e3!important;
+        background-color: #30c9e3!important;
+        color: #fff!important;
+    }
+}
+
+
+// 左侧菜单
+.menu-left-wrap{
+    width: 196px;
+    flex: 0 0 196px;
+}
+// 分类菜单
+.cate-menu-wrap{
+    max-height: 1000px;
+    padding-top: 15px;
+    margin-top: 30px;
+    overflow-y: auto;
+    border-top: 3px solid #707070;
+}
+
+
+// 动画
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.font-dpr(@font-size){
+  font-size: @font-size;
+
+  [data-dpr="2"] & {
+      font-size: @font-size * 2;
+  }
+
+  [data-dpr="3"] & {
+      font-size: @font-size * 3;
+  }
+}
+
+/**
+ * 公共字体尺寸
+ */
+ .font12{ .font-dpr(12px); }
+ .font14{ .font-dpr(14px); }
+ .font15{ .font-dpr(15px); }
+ .font16{ .font-dpr(16px); }
+ .font18{ .font-dpr(18px); }
+ .font20{ .font-dpr(20px); }
+ .font26{ .font-dpr(26px); }
+ .font24{ .font-dpr(24px); }
+ .font34{ .font-dpr(34px); }
+
+
+ // 首页轮播dots
+ .dot-wrap{
+  position: absolute;
+  right: 40px;
+  top: 60px;
+  display: flex;
+  z-index: 2;
+  &>div{
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    margin-left: 16px;
+    border-radius: 50%;
+    transition: all .3s;
+    &.active{
+      transform: scale(1.8);
+      transition: all .3s;
+    }
+  }
+}
+
+// 面包屑
+.el-breadcrumb{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin: 0 20px;
+}
