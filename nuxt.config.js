@@ -37,6 +37,9 @@ module.exports = {
     '@/plugins/global',
     { src: '@/plugins/swiper', ssr: false }
   ],
+  server: {
+    port: 3001, // default: 3000
+  },
   /*
   ** Nuxt.js dev-modules
   */
