@@ -15,6 +15,7 @@ void (function updateModules() {
   resolveStoreModules(require('..\\store\\cate.js'), 'cate.js')
   resolveStoreModules(require('..\\store\\mutations-type.js'), 'mutations-type.js')
   resolveStoreModules(require('..\\store\\nav.js'), 'nav.js')
+  resolveStoreModules(require('..\\store\\screen.js'), 'screen.js')
 
   // If the environment supports hot reloading...
 })()

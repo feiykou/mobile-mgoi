@@ -167,19 +167,19 @@ button{
  // 首页轮播dots
  .dot-wrap{
   position: absolute;
-  right: 40px;
-  top: 60px;
+  right: 30px;
+  top: 30px;
   display: flex;
   z-index: 2;
   &>div{
     width: 8px;
     height: 8px;
     background-color: #000;
-    margin-left: 16px;
+    margin-left: 20px;
     border-radius: 50%;
     transition: all .3s;
     &.active{
-      transform: scale(1.8);
+      transform: scale(2.4);
       transition: all .3s;
     }
   }
@@ -191,4 +191,11 @@ button{
   align-items: center;
   height: 100px;
   margin: 0 20px;
+}
+
+// 图片自适应
+.respons-img{
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
 }
