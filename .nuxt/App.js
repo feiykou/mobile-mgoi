@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { getMatchedComponentsInstances, promisify, globalHandleError } from './utils'
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import '..\\node_modules\\element-ui\\lib\\theme-chalk\\index.css'
+import '..\\node_modules\\_element-ui@2.12.0@element-ui\\lib\\theme-chalk\\index.css'
 
 import '..\\node_modules\\_swiper@4.5.1@swiper\\dist\\css\\swiper.css'
 
