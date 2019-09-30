@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Header from '@/components/common/header.vue'
-import footer from '@/components/common/footer.vue'
+import Footer from '@/components/common/footer.vue'
+import Image from '@/components/mgoi-img.vue'
+
 
 Vue.component('Header', Header)
-Vue.component('Footer', footer)
+Vue.component('Footer', Footer)
+Vue.component('mImage', Image)
 
 Vue.directive('hoverClass', {
   bind(el, binding) {

@@ -17,7 +17,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: '@/components/loading.vue',
   /*
   ** Global CSS
   */
@@ -102,7 +102,7 @@ module.exports = {
           viewportHeight: 1334, // 视窗的高度，根据750设备的宽度来指定，一般指定1334，也可以不配置
           unitPrecision: 3, // 指定`px`转换为视窗单位值的小数位数（很多时候无法整除）
           viewportUnit: 'vw', // 指定需要转换成的视窗单位，建议使用vw
-          selectorBlackList: ['body','html','.index-swiper-slide','.set-size','.font12', '.font14', '.font15', '.font16', '.font18', '.font20', '.font24', '.font26', '.font34'], // 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名
+          selectorBlackList: ['body','html','.index-swiper-slide','.el-dialog__wrapper','.v-modal','.set-size','.font12', '.font14', '.font15', '.font16', '.font18', '.font20', '.font24', '.font26', '.font34'], // 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名
           minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值
           mediaQuery: false // 允许在媒体查询中转换`px`         
         }

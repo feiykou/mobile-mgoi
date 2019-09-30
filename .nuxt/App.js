@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { getMatchedComponentsInstances, promisify, globalHandleError } from './utils'
-import NuxtLoading from './components/nuxt-loading.vue'
+import NuxtLoading from '@/components/loading.vue'
 
 import '..\\node_modules\\_element-ui@2.12.0@element-ui\\lib\\theme-chalk\\index.css'
 

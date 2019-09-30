@@ -25,9 +25,8 @@ ul,li{
     list-style: none;
 }
 
-.content{
-    width: 1200px;
-    margin: 0 auto;   
+.container{
+  overflow: hidden;
 }
 
 a{
@@ -73,7 +72,6 @@ button{
 }
 
 // 按钮动画
-
 .btn{
   display: flex;
   align-items: center;
@@ -170,18 +168,18 @@ button{
  .dot-wrap{
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 40px;
   display: flex;
   z-index: 2;
   &>div{
-    width: 8px;
-    height: 8px;
+    width: 36px;
+    height: 1px;
     background-color: #000;
-    margin-left: 20px;
-    border-radius: 50%;
+    margin-left: 10px;
     transition: all .3s;
     &.active{
-      transform: scale(2.4);
+      transform: scaleY(3);
+      transform-origin: center;
       transition: all .3s;
     }
   }
