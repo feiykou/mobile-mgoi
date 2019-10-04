@@ -32,7 +32,7 @@ module.exports = {
   plugins: [
     '@/plugins/components',
     '@/plugins/global',
-    // '@/plugins/vant',
+    '@/plugins/vant',
     // '@/plugins/element-ui',
     // { src: '@/plugins/swiper', ssr: false }
   ],
@@ -86,13 +86,7 @@ module.exports = {
     // transpile: [/^element-ui/],
     vendor: ['vant','axios'],
     babel: {
-      'plugins': [
-        ['import', {
-          libraryName: 'vant',
-          libraryDirectory: 'es',
-          style: true
-        }, 'vant']
-      ]
+      
     },
     extractCSS: { allChunks: true },
     analyze: true, 
