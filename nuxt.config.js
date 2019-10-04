@@ -32,7 +32,7 @@ module.exports = {
   plugins: [
     '@/plugins/components',
     '@/plugins/global',
-    // '@/plugins/vant',
+    '@/plugins/vant',
     // '@/plugins/element-ui',
     // { src: '@/plugins/swiper', ssr: false }
   ],
