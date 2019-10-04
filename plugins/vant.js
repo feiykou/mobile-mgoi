@@ -1,5 +1,24 @@
 import Vue from 'vue'
-import Vant from 'vant'
-import 'vant/lib/index.css'
+import {
+  Swipe, 
+  SwipeItem, 
+  Popup, 
+  Image,
+  Slider,
+  Tabs,
+  Tab,
+  Collapse,
+  CollapseItem
+} from 'vant'
+import 'vant/lib/index.css';
 
-Vue.use(Vant)
+Vue.use(Swipe)
+  .use(SwipeItem)
+  .use(Popup)
+  .use(Image)
+  .use(Slider)
+  .use(Tabs)
+  .use(Tab)
+  .use(Collapse)
+  .use(CollapseItem)
+  

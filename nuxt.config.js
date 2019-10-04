@@ -86,7 +86,15 @@ module.exports = {
     // transpile: [/^element-ui/],
     vendor: ['vant','axios'],
     babel: {
-      
+      // "plugins": [ 
+      //     ["import", 
+      //       { 
+      //         "libraryName": "vant", 
+      //         "libraryDirectory": "es", 
+      //         "style": true 
+      //       }
+      //     ] 
+      // ]
     },
     extractCSS: { allChunks: true },
     analyze: true, 
