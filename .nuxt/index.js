@@ -13,10 +13,8 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_axios_6ebc9b92 from 'nuxt_plugin_axios_6ebc9b92' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_elementui_d905880e from 'nuxt_plugin_elementui_d905880e' // Source: ..\\plugins\\element-ui (mode: 'all')
 import nuxt_plugin_components_567e580a from 'nuxt_plugin_components_567e580a' // Source: ..\\plugins\\components (mode: 'all')
 import nuxt_plugin_global_2c8b7297 from 'nuxt_plugin_global_2c8b7297' // Source: ..\\plugins\\global (mode: 'all')
-import nuxt_plugin_swiper_419e176c from 'nuxt_plugin_swiper_419e176c' // Source: ..\\plugins\\swiper (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -171,20 +169,12 @@ async function createApp(ssrContext) {
     await nuxt_plugin_axios_6ebc9b92(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_elementui_d905880e === 'function') {
-    await nuxt_plugin_elementui_d905880e(app.context, inject)
-  }
-
   if (typeof nuxt_plugin_components_567e580a === 'function') {
     await nuxt_plugin_components_567e580a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_global_2c8b7297 === 'function') {
     await nuxt_plugin_global_2c8b7297(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_swiper_419e176c === 'function') {
-    await nuxt_plugin_swiper_419e176c(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

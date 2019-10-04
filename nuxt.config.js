@@ -22,19 +22,19 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css',
-    'swiper/dist/css/swiper.css',
-    '@/static/css/style.css',
-    '@/static/css/animate.min.css'
+    // 'element-ui/lib/theme-chalk/index.css',
+    // 'swiper/dist/css/swiper.css',
+    '@/static/css/style.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui',
     '@/plugins/components',
     '@/plugins/global',
-    { src: '@/plugins/swiper', ssr: false }
+    // '@/plugins/vant',
+    // '@/plugins/element-ui',
+    // { src: '@/plugins/swiper', ssr: false }
   ],
   server: {
     port: 3001, // default: 3000
@@ -83,10 +83,22 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    transpile: [/^element-ui/],
-    vendor: ['element-ui','axios'],
+    // transpile: [/^element-ui/],
+    vendor: ['vant','axios'],
+    babel: {
+      'plugins': [
+        [
+          'import',
+          {
+            'libraryName': 'vant',
+            'libraryDirectory': 'es',
+            'style': true
+          }
+        ]
+      ]
+    },
     extractCSS: { allChunks: true },
-    analyze: false, 
+    analyze: true, 
     /*
     ** You can extend webpack config here
     */

@@ -10,6 +10,7 @@ const _6b2a3649 = () => interopDefault(import('..\\components\\about\\news.vue' 
 const _5dbb6890 = () => interopDefault(import('..\\components\\about\\recruit.vue' /* webpackChunkName: "components_recruit" */))
 const _7ce34209 = () => interopDefault(import('..\\pages\\column\\index.vue' /* webpackChunkName: "pages_column_index" */))
 const _9b4475f4 = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages_product_index" */))
+const _fa8c0356 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages_test" */))
 const _06028eac = () => interopDefault(import('..\\pages\\theme\\index.vue' /* webpackChunkName: "pages_theme_index" */))
 const _2b3c32b1 = () => interopDefault(import('..\\pages\\column\\_id.vue' /* webpackChunkName: "pages_column__id" */))
 const _adb11dd8 = () => interopDefault(import('..\\pages\\news\\_id.vue' /* webpackChunkName: "pages_news__id" */))
@@ -47,6 +48,10 @@ export const routerOptions = {
       path: "/product",
       component: _9b4475f4,
       name: "product"
+    }, {
+      path: "/test",
+      component: _fa8c0356,
+      name: "test"
     }, {
       path: "/theme",
       component: _06028eac,
