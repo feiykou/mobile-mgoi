@@ -57,7 +57,7 @@ module.exports = {
     proxy: true // Can be also an object with default options
   },
   proxy: [
-    ['/api', { target: 'http://mgoi.net/api/v1/', pathRewrite: { '^/api': '/api/v1/' } }]
+    ['/api', { target: 'http://www.mgoi.net/api/v1/', pathRewrite: { '^/api': '/api/v1/' } }]
   ],
 
   router: {
