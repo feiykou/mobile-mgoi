@@ -9,12 +9,16 @@ const _b5d8b0cc = () => interopDefault(import('..\\components\\about\\contact.vu
 const _6b2a3649 = () => interopDefault(import('..\\components\\about\\news.vue' /* webpackChunkName: "components_news" */))
 const _5dbb6890 = () => interopDefault(import('..\\components\\about\\recruit.vue' /* webpackChunkName: "components_recruit" */))
 const _7ce34209 = () => interopDefault(import('..\\pages\\column\\index.vue' /* webpackChunkName: "pages_column_index" */))
+const _3647e812 = () => interopDefault(import('..\\pages\\pets.vue' /* webpackChunkName: "pages_pets" */))
 const _9b4475f4 = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages_product_index" */))
-const _fa8c0356 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages_test" */))
+const _f78e2208 = () => interopDefault(import('..\\pages\\special\\index.vue' /* webpackChunkName: "pages_special_index" */))
 const _06028eac = () => interopDefault(import('..\\pages\\theme\\index.vue' /* webpackChunkName: "pages_theme_index" */))
+const _bfe85692 = () => interopDefault(import('..\\pages\\column\\list.vue' /* webpackChunkName: "pages_column_list" */))
+const _28d535cf = () => interopDefault(import('..\\pages\\product\\news.vue' /* webpackChunkName: "pages_product_news" */))
 const _2b3c32b1 = () => interopDefault(import('..\\pages\\column\\_id.vue' /* webpackChunkName: "pages_column__id" */))
 const _adb11dd8 = () => interopDefault(import('..\\pages\\news\\_id.vue' /* webpackChunkName: "pages_news__id" */))
 const _0e8550ee = () => interopDefault(import('..\\pages\\product\\_id.vue' /* webpackChunkName: "pages_product__id" */))
+const _15ee8064 = () => interopDefault(import('..\\pages\\special\\_id.vue' /* webpackChunkName: "pages_special__id" */))
 const _380767d8 = () => interopDefault(import('..\\pages\\theme\\_id.vue' /* webpackChunkName: "pages_theme__id" */))
 const _2548f0c2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
@@ -45,17 +49,29 @@ export const routerOptions = {
       component: _7ce34209,
       name: "column"
     }, {
+      path: "/pets",
+      component: _3647e812,
+      name: "pets"
+    }, {
       path: "/product",
       component: _9b4475f4,
       name: "product"
     }, {
-      path: "/test",
-      component: _fa8c0356,
-      name: "test"
+      path: "/special",
+      component: _f78e2208,
+      name: "special"
     }, {
       path: "/theme",
       component: _06028eac,
       name: "theme"
+    }, {
+      path: "/column/list",
+      component: _bfe85692,
+      name: "column-list"
+    }, {
+      path: "/product/news",
+      component: _28d535cf,
+      name: "product-news"
     }, {
       path: "/column/:id",
       component: _2b3c32b1,
@@ -68,6 +84,10 @@ export const routerOptions = {
       path: "/product/:id",
       component: _0e8550ee,
       name: "product-id"
+    }, {
+      path: "/special/:id",
+      component: _15ee8064,
+      name: "special-id"
     }, {
       path: "/theme/:id",
       component: _380767d8,

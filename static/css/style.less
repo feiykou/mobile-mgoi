@@ -17,7 +17,7 @@
 
 html,body{
     font-family: "Montserrat", "游ゴシック", "Yu Gothic", YuGothic, sans-serif !important;
-    .font-dpr(12px);
+    .font-dpr(14px);
     line-height: 1.6;
 }
 
@@ -27,6 +27,10 @@ ul,li{
 
 .container{
   overflow: hidden;
+}
+
+.img{
+  vertical-align: middle;
 }
 
 a{
@@ -63,12 +67,12 @@ i{
 * */
 @font-face {
   font-family: 'iconfont';  /* project id 1214968 */
-  src: url('//at.alicdn.com/t/font_1214968_qpnvyhrvv3l.eot');
-  src: url('//at.alicdn.com/t/font_1214968_qpnvyhrvv3l.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1214968_qpnvyhrvv3l.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1214968_qpnvyhrvv3l.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1214968_qpnvyhrvv3l.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1214968_qpnvyhrvv3l.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.eot');
+  src: url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.svg#iconfont') format('svg');
 }
 
 .iconfont{
@@ -202,4 +206,45 @@ i{
   background-size: cover; 
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+// 面包屑头部样式
+.crumb-head-title{
+  margin: 28px 50px 72px;
+  &:after{
+    border-color: #626262;
+  }
+  .crumb-wrap{
+    margin: 0!important;
+  }
+}
+
+// 排序
+.filter-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 96px 0 60px;
+  .product-num{
+      font-size: 28px;
+      font-weight: bold;
+  }
+  .filter-list{
+      display: flex;
+      dt{
+          font-weight: bold;
+          margin-right: 10px;
+      }
+      dd{
+          margin-right: 20px;
+          cursor: pointer;
+          &.active{
+              color: #32a2c5;
+          }
+          &:hover{
+            opacity: 0.5;
+          }
+      }
+  }
 }
