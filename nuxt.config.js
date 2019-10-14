@@ -37,7 +37,7 @@ module.exports = {
     // { src: '@/plugins/swiper', ssr: false }
   ],
   server: {
-    host: 'localhost',
+    // host: 'localhost',
     port: 3001, // default: 3000
   },
   /*
@@ -57,7 +57,7 @@ module.exports = {
     proxy: true // Can be also an object with default options
   },
   proxy: [
-    ['/api', { target: 'http://mgoiweb.cn/api/v1/', pathRewrite: { '^/api': '/api/v1/' } }]
+    ['/api', { target: 'http://mgoi.net/api/v1/', pathRewrite: { '^/api': '/api/v1/' } }]
   ],
 
   router: {
