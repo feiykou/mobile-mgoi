@@ -61,6 +61,9 @@ module.exports = {
   ],
 
   router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    },
     extendRoutes (routes, resolve) {
       const aboutIndex = routes.findIndex(route => route.chunkName === 'pages/about/index')
       let aindex = routes[aboutIndex].children.findIndex(route => route.name === 'about-index')

@@ -1,22 +1,22 @@
-assets
+# assets
 
-components
+# components
 
-layouts
+# layouts
 
-middleware
+# middleware
 
 node_modules
 
-pages
+# pages
 
-service
+# service
 
-store
+# store
 
-.editorconfig
+# .editorconfig
 
-.env
+# .env
 
-package-lock.json
+# package-lock.json
 
