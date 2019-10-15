@@ -1,0 +1,250 @@
+.font-dpr(@font-size: 12px){
+  font-size: @font-size!important;
+
+  [data-dpr="2"] & {
+      font-size: @font-size * 2!important;
+  }
+
+  [data-dpr="3"] & {
+      font-size: @font-size * 3!important;
+  }
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    font-family: "Montserrat", "游ゴシック", "Yu Gothic", YuGothic, sans-serif !important;
+    .font-dpr(14px);
+    line-height: 1.6;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.container{
+  overflow: hidden;
+}
+
+.img{
+  vertical-align: middle;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+  transition: none .2s cubic-bezier(.215,.61,.355,1);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+a:hover,.hover-class{
+  opacity: 0.6;
+  -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+  transition: none .2s cubic-bezier(.215,.61,.355,1);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+button{
+  border: 0;
+  outline: none;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+i{
+  font-style: normal;
+}
+
+/*
+* 字体库
+* */
+@font-face {
+  font-family: 'iconfont';  /* project id 1214968 */
+  src: url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.eot');
+  src: url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1214968_13g68gl1avrl.svg#iconfont') format('svg');
+}
+
+.iconfont{
+	font-family: iconfont;
+}
+
+// 按钮动画
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid #707070;
+  .font-dpr(12px);
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: 1;
+  }
+  
+}
+.btn-animate{
+    cursor: pointer;
+    -webkit-transition: none .2s cubic-bezier(.215,.61,.355,1);
+    transition: none .2s cubic-bezier(.215,.61,.355,1);
+    -webkit-transition-property: opacity,border-color,background-color,color;
+    transition-property: opacity,border-color,background-color,color;
+}
+
+.btn-gray{
+    &:hover{
+        border-color: #cbcbcb!important;
+        background-color: #cbcbcb!important;
+    }
+}
+
+.btn-primary{
+    &:hover{
+        border-color: #30c9e3!important;
+        background-color: #30c9e3!important;
+        color: #fff!important;
+    }
+}
+
+
+// 左侧菜单
+.menu-left-wrap{
+    width: 196px;
+    flex: 0 0 196px;
+}
+// 分类菜单
+.cate-menu-wrap{
+    max-height: 1000px;
+    padding-top: 15px;
+    margin-top: 30px;
+    overflow-y: auto;
+    border-top: 3px solid #707070;
+}
+
+
+// 动画
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+
+
+/**
+ * 公共字体尺寸
+ */
+ .font12{ .font-dpr(12px); }
+ .font14{ .font-dpr(14px); }
+ .font15{ .font-dpr(15px); }
+ .font16{ .font-dpr(16px); }
+ .font18{ .font-dpr(18px); }
+ .font20{ .font-dpr(20px); }
+ .font26{ .font-dpr(26px); }
+ .font24{ .font-dpr(24px); }
+ .font34{ .font-dpr(34px); }
+
+
+ // 首页轮播dots
+ .dot-wrap{
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  display: flex;
+  z-index: 2;
+  &>div{
+    width: 36px;
+    height: 1px;
+    background-color: #000;
+    margin-left: 10px;
+    transition: all .3s;
+    &.active{
+      transform: scaleY(3);
+      transform-origin: center;
+      transition: all .3s;
+    }
+  }
+}
+
+// 面包屑
+.el-breadcrumb{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin: 0 20px;
+}
+
+// 图片自适应
+.respons-img{
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+// 面包屑头部样式
+.crumb-head-title{
+  margin: 28px 50px 72px;
+  &:after{
+    border-color: #626262;
+  }
+  .crumb-wrap{
+    margin: 0!important;
+  }
+}
+
+// 排序
+.filter-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 96px 0 60px;
+  .product-num{
+      font-size: 28px;
+      font-weight: bold;
+  }
+  .filter-list{
+      display: flex;
+      dt{
+          font-weight: bold;
+          margin-right: 10px;
+      }
+      dd{
+          margin-right: 20px;
+          cursor: pointer;
+          &.active{
+              color: #32a2c5;
+          }
+          &:hover{
+            opacity: 0.5;
+          }
+      }
+  }
+}
