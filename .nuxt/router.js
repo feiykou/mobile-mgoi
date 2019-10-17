@@ -9,11 +9,13 @@ const _b5d8b0cc = () => interopDefault(import('..\\components\\about\\contact.vu
 const _6b2a3649 = () => interopDefault(import('..\\components\\about\\news.vue' /* webpackChunkName: "components_news" */))
 const _5dbb6890 = () => interopDefault(import('..\\components\\about\\recruit.vue' /* webpackChunkName: "components_recruit" */))
 const _7ce34209 = () => interopDefault(import('..\\pages\\column\\index.vue' /* webpackChunkName: "pages_column_index" */))
+const _706de92f = () => interopDefault(import('..\\pages\\gift\\index.vue' /* webpackChunkName: "pages_gift_index" */))
 const _3647e812 = () => interopDefault(import('..\\pages\\pets.vue' /* webpackChunkName: "pages_pets" */))
 const _9b4475f4 = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages_product_index" */))
 const _f78e2208 = () => interopDefault(import('..\\pages\\special\\index.vue' /* webpackChunkName: "pages_special_index" */))
 const _06028eac = () => interopDefault(import('..\\pages\\theme\\index.vue' /* webpackChunkName: "pages_theme_index" */))
 const _bfe85692 = () => interopDefault(import('..\\pages\\column\\list.vue' /* webpackChunkName: "pages_column_list" */))
+const _7e9cb0d1 = () => interopDefault(import('..\\pages\\gift\\list.vue' /* webpackChunkName: "pages_gift_list" */))
 const _28d535cf = () => interopDefault(import('..\\pages\\product\\news.vue' /* webpackChunkName: "pages_product_news" */))
 const _2b3c32b1 = () => interopDefault(import('..\\pages\\column\\_id.vue' /* webpackChunkName: "pages_column__id" */))
 const _adb11dd8 = () => interopDefault(import('..\\pages\\news\\_id.vue' /* webpackChunkName: "pages_news__id" */))
@@ -49,6 +51,10 @@ export const routerOptions = {
       component: _7ce34209,
       name: "column"
     }, {
+      path: "/gift",
+      component: _706de92f,
+      name: "gift"
+    }, {
       path: "/pets",
       component: _3647e812,
       name: "pets"
@@ -68,6 +74,10 @@ export const routerOptions = {
       path: "/column/list",
       component: _bfe85692,
       name: "column-list"
+    }, {
+      path: "/gift/list",
+      component: _7e9cb0d1,
+      name: "gift-list"
     }, {
       path: "/product/news",
       component: _28d535cf,

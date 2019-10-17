@@ -37,7 +37,7 @@ module.exports = {
     // { src: '@/plugins/swiper', ssr: false }
   ],
   server: {
-    // host: 'localhost',
+    // host: '192.168.48.121',
     port: 3001, // default: 3000
   },
   /*
@@ -59,9 +59,13 @@ module.exports = {
   proxy: [
     ['/api', { target: 'http://www.mgoi.net/api/v1/', pathRewrite: { '^/api': '/api/v1/' } }]
   ],
-
+  // http://www.mgoi.net/api/v1/
+  // http://mgoiweb.cn/api/v1/
   router: {
     scrollBehavior: function (to, from, savedPosition) {
+      if(savedPosition){
+        return savedPosition
+      }
       return { x: 0, y: 0 }
     },
     extendRoutes (routes, resolve) {
