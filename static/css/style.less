@@ -173,8 +173,9 @@ i{
  .font16{ .font-dpr(16px); }
  .font18{ .font-dpr(18px); }
  .font20{ .font-dpr(20px); }
- .font26{ .font-dpr(26px); }
  .font24{ .font-dpr(24px); }
+ .font25{ .font-dpr(25px); }
+ .font26{ .font-dpr(26px); }
  .font34{ .font-dpr(34px); }
 
 
@@ -227,24 +228,21 @@ i{
 
 // 排序
 .filter-wrap{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 72px;
   .product-num{
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 30px;
+    margin-bottom: 30px;
   }
   .filter-list{
       display: flex;
-      margin-bottom: 30px;
+      align-items: center;
+      justify-content: flex-end;
       dt{
           font-weight: bold;
-          margin-right: 10px;
       }
       dd{
           margin-right: 20px;
           cursor: pointer;
+          color: #7d7d7d;
           &.active{
               color: #32a2c5;
           }
