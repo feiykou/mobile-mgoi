@@ -1,6 +1,17 @@
+function setScrollTop(top=0){
+  if(document.documentElement){
+    document.documentElement.scrollTop = top
+  } else {
+    document.body.scrollTop = top
+  }
+}
+
 export default {
   inserted: function(el, binding) {
       el.onclick = function() {
+        if(process.client){
+          console.log(11111)
+          console.log(el)
           let total;
           if (binding.value == 0) {
               total = 0;
@@ -13,10 +24,12 @@ export default {
               (function smoothDown() {
                   if (distance < total) {
                       distance += step;
-                      document.documentElement.scrollTop = distance;
+                      setScrollTop(distance)
+                      // document.documentElement.scrollTop = distance;
                       setTimeout(smoothDown, 5);
                   } else {
-                      document.documentElement.scrollTop = total;
+                      setScrollTop(total)
+                      // document.documentElement.scrollTop = total;
                   }
               })();
           } else {
@@ -25,13 +38,17 @@ export default {
               (function smoothUp() {
                   if (distance > total) {
                       distance -= step;
-                      document.documentElement.scrollTop = distance;
+                      setScrollTop(distance)
+                      // document.documentElement.scrollTop = distance;
                       setTimeout(smoothUp, 5);
                   } else {
-                      document.documentElement.scrollTop = total;
+                      setScrollTop(total)
+                      // document.documentElement.scrollTop = total;
                   }
               })();
           }
+
+        }
 
       }
   }
