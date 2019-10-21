@@ -36,6 +36,25 @@ Vue.directive('hoverClass', {
     }
   }
 })
-
-
 Vue.directive('anchor', Anchor)
+
+
+
+const tabBarAnimate = function(){
+    let mark = true
+    let curTop = this.headTcurTop
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const distance = curTop - scrollTop
+    if(scrollTop < 60){
+        if(mark == this.isShowTab) return;
+        this.isShowTab = true
+        return;
+    }
+    if(Math.abs(distance) > 10){
+        mark = distance > 0 ? true : false
+        this.headTcurTop = scrollTop
+        if(mark == this.isShowTab) return;
+		    this.isShowTab = mark
+    }
+}
+Vue.prototype.$tabBarAnimate = tabBarAnimate
