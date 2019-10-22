@@ -37,7 +37,7 @@ module.exports = {
     // { src: '@/plugins/swiper', ssr: false }
   ],
   server: {
-    // host: '192.168.48.185',
+    host: '192.168.48.150',
     port: 3001, // default: 3000
   },
   /*
@@ -128,13 +128,6 @@ module.exports = {
           minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值
           mediaQuery: false // 允许在媒体查询中转换`px`         
         }
-      }
-    }
-  },
-  render: {
-    bundleRenderer: {
-      shouldPreload: (file, type) => {
-        return ['script', 'style', 'font'].includes(type)
       }
     }
   }

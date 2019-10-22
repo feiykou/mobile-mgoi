@@ -27,7 +27,12 @@
     "vue-content-loader": "^0.2.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
     "babel-plugin-import": "^1.12.2",
+    "core-js": "^2.6.10",
     "css-loader": "^3.2.0",
     "cssnano-preset-advanced": "^4.0.7",
     "isnumeric": "^0.3.3",

@@ -12,6 +12,7 @@ const _7ce34209 = () => interopDefault(import('..\\pages\\column\\index.vue' /* 
 const _706de92f = () => interopDefault(import('..\\pages\\gift\\index.vue' /* webpackChunkName: "pages_gift_index" */))
 const _3647e812 = () => interopDefault(import('..\\pages\\pets.vue' /* webpackChunkName: "pages_pets" */))
 const _9b4475f4 = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages_product_index" */))
+const _69d445ab = () => interopDefault(import('..\\pages\\search.vue' /* webpackChunkName: "pages_search" */))
 const _f78e2208 = () => interopDefault(import('..\\pages\\special\\index.vue' /* webpackChunkName: "pages_special_index" */))
 const _06028eac = () => interopDefault(import('..\\pages\\theme\\index.vue' /* webpackChunkName: "pages_theme_index" */))
 const _bfe85692 = () => interopDefault(import('..\\pages\\column\\list.vue' /* webpackChunkName: "pages_column_list" */))
@@ -62,6 +63,10 @@ export const routerOptions = {
       path: "/product",
       component: _9b4475f4,
       name: "product"
+    }, {
+      path: "/search",
+      component: _69d445ab,
+      name: "search"
     }, {
       path: "/special",
       component: _f78e2208,

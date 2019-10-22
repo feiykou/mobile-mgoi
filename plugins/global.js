@@ -36,8 +36,9 @@ Vue.directive('hoverClass', {
     }
   }
 })
-Vue.directive('anchor', Anchor)
 
+// 锚点
+Vue.directive('anchor', Anchor)
 
 
 const tabBarAnimate = function(){
