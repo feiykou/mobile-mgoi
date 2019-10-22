@@ -37,7 +37,7 @@ module.exports = {
     // { src: '@/plugins/swiper', ssr: false }
   ],
   server: {
-    host: '192.168.48.150',
+    // host: '192.168.48.150',
     port: 3001, // default: 3000
   },
   /*
