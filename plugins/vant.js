@@ -10,6 +10,7 @@ import {
   Tab,
   Collapse,
   CollapseItem,
+  Lazyload,
   Search
 } from 'vant'
 
@@ -24,6 +25,7 @@ Vue.use(Swipe)
   .use(Collapse)
   .use(CollapseItem)
   .use(Search)
+  .use(Lazyload)
   
 // import Vant from 'vant'
 
