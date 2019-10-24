@@ -126,7 +126,7 @@ module.exports = {
             }      
       }
     },
-    analyze: true, 
+    // analyze: true, 
     /*
     ** You can extend webpack config here
     */
