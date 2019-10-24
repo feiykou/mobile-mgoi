@@ -106,7 +106,23 @@ module.exports = {
     },
     optimization: {
       splitChunks: {
-        
+        chunks: 'all',
+           automaticNameDelimiter: '.',
+           maxAsyncRequests: 7,       
+           cacheGroups: {          
+                axios: {           
+                   test: /node_modules[\\/]axios/,            
+                   chunks: 'all',            
+                   priority: 20,            
+                   name: true          
+                },          
+                vant: {            
+                    test: /node_modules[\\/]vant/,           
+                    chunks: 'all',           
+                    priority: 20,            
+                    name: true          
+                 }       
+            }      
       }
     },
     analyze: true, 

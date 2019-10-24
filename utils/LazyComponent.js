@@ -2,7 +2,7 @@ export default ({ component, option }) => {
   let resolveComponent;
   return () => ({
     component: component(),
-    delay: 200,
+    delay: 400,
     loading: {
       mounted() {
         this.load()
