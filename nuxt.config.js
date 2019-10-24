@@ -93,6 +93,7 @@ module.exports = {
   build: {
     // transpile: [/^element-ui/],
     vendor: ['vant','axios'],
+    extractCSS: true,
     babel: {
       // "plugins": [ 
       //     ["import", 
@@ -133,6 +134,16 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+
+    },
+    // vant按需引入
+    babel: {
+      "plugins": [
+        ['import', {
+          libraryName: 'vant',
+          libraryDirectory: 'es'
+        }, 'vant']
+      ]
     },
     postcss: {
       plugins: {
