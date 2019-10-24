@@ -107,23 +107,25 @@ module.exports = {
     maxChunkSize: 300000,
     optimization: {
       splitChunks: {
-        chunks: 'all',
-           automaticNameDelimiter: '.',
-           maxAsyncRequests: 7,       
-           cacheGroups: {          
-                axios: {           
-                   test: /node_modules[\\/]axios/,            
-                   chunks: 'all',            
-                   priority: 20,            
-                   name: true          
-                },          
-                vant: {            
-                    test: /node_modules[\\/]vant/,           
-                    chunks: 'all',           
-                    priority: 20,            
-                    name: true          
-                 }       
-            }      
+        minSize: 10000,
+        maxSize: 250000
+        // chunks: 'all',
+        //    automaticNameDelimiter: '.',
+        //    maxAsyncRequests: 7,       
+        //    cacheGroups: {          
+        //         axios: {           
+        //            test: /node_modules[\\/]axios/,            
+        //            chunks: 'all',            
+        //            priority: 20,            
+        //            name: true          
+        //         },          
+        //         vant: {            
+        //             test: /node_modules[\\/]vant/,           
+        //             chunks: 'all',           
+        //             priority: 20,            
+        //             name: true          
+        //          }       
+        //     }      
       }
     },
     // analyze: true, 
