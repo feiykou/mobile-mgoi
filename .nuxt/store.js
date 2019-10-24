@@ -13,6 +13,7 @@ void (function updateModules() {
   store.modules = store.modules || {}
 
   resolveStoreModules(require('..\\store\\cate.js'), 'cate.js')
+  resolveStoreModules(require('..\\store\\indexdata.js'), 'indexdata.js')
   resolveStoreModules(require('..\\store\\mutations-type.js'), 'mutations-type.js')
   resolveStoreModules(require('..\\store\\nav.js'), 'nav.js')
   resolveStoreModules(require('..\\store\\screen.js'), 'screen.js')

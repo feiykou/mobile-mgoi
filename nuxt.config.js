@@ -37,7 +37,7 @@ module.exports = {
     // { src: '@/plugins/swiper', ssr: false }
   ],
   server: {
-    // host: '192.168.48.150',
+    host: '192.168.48.104',
     port: 3001, // default: 3000
   },
   /*
@@ -104,7 +104,11 @@ module.exports = {
       //     ] 
       // ]
     },
-    extractCSS: { allChunks: true },
+    optimization: {
+      splitChunks: {
+        
+      }
+    },
     analyze: true, 
     /*
     ** You can extend webpack config here
