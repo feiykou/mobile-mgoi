@@ -137,14 +137,14 @@ module.exports = {
 
     },
     // vant按需引入
-    babel: {
-      "plugins": [
-        ['import', {
-          libraryName: 'vant',
-          libraryDirectory: 'es'
-        }, 'vant']
-      ]
-    },
+    // babel: {
+    //   "plugins": [
+    //     ['import', {
+    //       libraryName: 'vant',
+    //       libraryDirectory: 'es'
+    //     }, 'vant']
+    //   ]
+    // },
     postcss: {
       plugins: {
         "postcss-aspect-ratio-mini": {}, 
