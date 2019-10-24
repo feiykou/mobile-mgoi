@@ -104,6 +104,7 @@ module.exports = {
       //     ] 
       // ]
     },
+    maxChunkSize: 300000,
     optimization: {
       splitChunks: {
         chunks: 'all',
