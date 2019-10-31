@@ -17,7 +17,9 @@ const _f78e2208 = () => interopDefault(import('..\\pages\\special\\index.vue' /*
 const _06028eac = () => interopDefault(import('..\\pages\\theme\\index.vue' /* webpackChunkName: "pages_theme_index" */))
 const _bfe85692 = () => interopDefault(import('..\\pages\\column\\list.vue' /* webpackChunkName: "pages_column_list" */))
 const _7e9cb0d1 = () => interopDefault(import('..\\pages\\gift\\list.vue' /* webpackChunkName: "pages_gift_list" */))
+const _07217d14 = () => interopDefault(import('..\\pages\\gift\\list copy.vue' /* webpackChunkName: "pages_gift_list copy" */))
 const _28d535cf = () => interopDefault(import('..\\pages\\product\\news.vue' /* webpackChunkName: "pages_product_news" */))
+const _01623098 = () => interopDefault(import('..\\pages\\theme\\list.vue' /* webpackChunkName: "pages_theme_list" */))
 const _2b3c32b1 = () => interopDefault(import('..\\pages\\column\\_id.vue' /* webpackChunkName: "pages_column__id" */))
 const _adb11dd8 = () => interopDefault(import('..\\pages\\news\\_id.vue' /* webpackChunkName: "pages_news__id" */))
 const _0e8550ee = () => interopDefault(import('..\\pages\\product\\_id.vue' /* webpackChunkName: "pages_product__id" */))
@@ -84,9 +86,17 @@ export const routerOptions = {
       component: _7e9cb0d1,
       name: "gift-list"
     }, {
+      path: "/gift/list copy",
+      component: _07217d14,
+      name: "gift-list copy"
+    }, {
       path: "/product/news",
       component: _28d535cf,
       name: "product-news"
+    }, {
+      path: "/theme/list",
+      component: _01623098,
+      name: "theme-list"
     }, {
       path: "/column/:id",
       component: _2b3c32b1,

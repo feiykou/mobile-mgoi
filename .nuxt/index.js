@@ -16,6 +16,7 @@ import nuxt_plugin_axios_6ebc9b92 from 'nuxt_plugin_axios_6ebc9b92' // Source: .
 import nuxt_plugin_components_567e580a from 'nuxt_plugin_components_567e580a' // Source: ..\\plugins\\components (mode: 'all')
 import nuxt_plugin_global_2c8b7297 from 'nuxt_plugin_global_2c8b7297' // Source: ..\\plugins\\global (mode: 'all')
 import nuxt_plugin_vant_925e8cb6 from 'nuxt_plugin_vant_925e8cb6' // Source: ..\\plugins\\vant (mode: 'all')
+import nuxt_plugin_swiper_419e176c from 'nuxt_plugin_swiper_419e176c' // Source: ..\\plugins\\swiper (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -180,6 +181,10 @@ async function createApp(ssrContext) {
 
   if (typeof nuxt_plugin_vant_925e8cb6 === 'function') {
     await nuxt_plugin_vant_925e8cb6(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_swiper_419e176c === 'function') {
+    await nuxt_plugin_swiper_419e176c(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

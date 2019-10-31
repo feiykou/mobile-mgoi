@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import 'vant/lib/index.css';
 import {
-  Swipe, 
-  SwipeItem, 
   Popup, 
   Image,
   Slider,
@@ -15,9 +13,7 @@ import {
 } from 'vant'
 
 
-Vue.use(Swipe)
-  .use(SwipeItem)
-  .use(Popup)
+Vue.use(Popup)
   .use(Image)
   .use(Slider)
   .use(Tabs)

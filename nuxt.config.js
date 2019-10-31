@@ -23,7 +23,6 @@ module.exports = {
   */
   css: [
     // 'element-ui/lib/theme-chalk/index.css',
-    // 'swiper/dist/css/swiper.css',
     '@/static/css/style.css'
   ],
   /*
@@ -34,10 +33,10 @@ module.exports = {
     '@/plugins/global',
     '@/plugins/vant',
     // '@/plugins/element-ui',
-    // { src: '@/plugins/swiper', ssr: false }
+    { src: '@/plugins/swiper', ssr: false }
   ],
   server: {
-    // host: '192.168.48.104',
+    // host: '192.168.48.108',
     port: 3001, // default: 3000
   },
   /*
@@ -92,7 +91,7 @@ module.exports = {
   */
   build: {
     // transpile: [/^element-ui/],
-    vendor: ['vant','axios'],
+    vendor: ['vant','axios','vue-awesome-swiper'],
     extractCSS: true,
     babel: {
       // "plugins": [ 
@@ -109,24 +108,30 @@ module.exports = {
     optimization: {
       splitChunks: {
         minSize: 10000,
-        maxSize: 250000
-        // chunks: 'all',
-        //    automaticNameDelimiter: '.',
-        //    maxAsyncRequests: 7,       
-        //    cacheGroups: {          
-        //         axios: {           
-        //            test: /node_modules[\\/]axios/,            
-        //            chunks: 'all',            
-        //            priority: 20,            
-        //            name: true          
-        //         },          
-        //         vant: {            
-        //             test: /node_modules[\\/]vant/,           
-        //             chunks: 'all',           
-        //             priority: 20,            
-        //             name: true          
-        //          }       
-        //     }      
+        maxSize: 250000,
+        chunks: 'all',
+           automaticNameDelimiter: '.',
+           maxAsyncRequests: 7,       
+           cacheGroups: {  
+              "vue-awesome-swiper": {           
+                   test: /node_modules[\\/]vue-awesome-swiper/,            
+                   chunks: 'all',            
+                   priority: 20,            
+                   name: true          
+                },          
+                // axios: {           
+                //    test: /node_modules[\\/]axios/,            
+                //    chunks: 'all',            
+                //    priority: 20,            
+                //    name: true          
+                // },          
+                // vant: {            
+                //     test: /node_modules[\\/]vant/,           
+                //     chunks: 'all',           
+                //     priority: 20,            
+                //     name: true          
+                //  }       
+            }      
       }
     },
     // analyze: true, 

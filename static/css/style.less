@@ -30,8 +30,9 @@ ul,li{
   overflow: hidden;
 }
 
-.img{
+.img,img{
   vertical-align: middle;
+  line-height: 1;
 }
 
 a{
@@ -166,39 +167,20 @@ i{
 /**
  * 公共字体尺寸
  */
- .font10{ .font-dpr(10px); }
+ .font10{ .font-dpr(12px); transform: scale(0.8); }
  .font12{ .font-dpr(12px); }
  .font14{ .font-dpr(14px); }
  .font15{ .font-dpr(15px); }
  .font16{ .font-dpr(16px); }
  .font18{ .font-dpr(18px); }
  .font20{ .font-dpr(20px); }
+ .font22{ .font-dpr(44px); }
  .font24{ .font-dpr(24px); }
  .font25{ .font-dpr(25px); }
  .font26{ .font-dpr(26px); }
  .font34{ .font-dpr(34px); }
 
 
- // 首页轮播dots
- .dot-wrap{
-  position: absolute;
-  right: 30px;
-  top: 40px;
-  display: flex;
-  z-index: 2;
-  &>div{
-    width: 36px;
-    height: 1px;
-    background-color: #000;
-    margin-left: 10px;
-    transition: all .3s;
-    &.active{
-      transform: scaleY(3);
-      transform-origin: center;
-      transition: all .3s;
-    }
-  }
-}
 
 // 面包屑
 .el-breadcrumb{
