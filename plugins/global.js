@@ -41,6 +41,41 @@ Vue.directive('hoverClass', {
 Vue.directive('anchor', Anchor)
 
 
+
+Vue.directive('isIphoneX', {
+  bind: function (el, binding) {
+      const _local = 'ios'
+      let isIphoneX = false
+      if (_local === 'ios' && window.screen.height) {
+          isIphoneX = window.screen.height > 750 ? true : false
+      }
+      if (isIphoneX) {
+          if (binding.value === 'margin') {
+              console.log('use margin')
+              el.setAttribute('style', 'margin-bottom: 8vw !important;')
+          } else if (binding.value === 'height') {
+              console.log('use height')
+              el.setAttribute(
+                  'style',
+                  ` margin-bottom: 15vh !important;min-height: 85vh !important;`
+              )
+          } else {
+              console.log('use padding')
+              el.setAttribute('style', 'margin-bottom: 8vw !important;')
+          }
+      } else {
+          if (binding.value === 'height') {
+              el.setAttribute(
+                  'style',
+                  ` margin-bottom: 11vh !important;min-height: 89vh !important;`
+              )
+          }
+      }
+  },
+  update: function (el, binding) { }
+})
+
+
 const tabBarAnimate = function(){
     let mark = true
     let curTop = this.headTcurTop
